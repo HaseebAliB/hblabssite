@@ -72,7 +72,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-white font-bold mb-1">Email Us</h4>
-                    <p className="text-slate-400">hello@hblabs.co</p>
+                    <p className="text-slate-400">hello@hblabs.tech</p>
                     <p className="text-indigo-400 text-sm mt-1 font-medium">Response within 24 hours</p>
                   </div>
                 </div>

@@ -46,7 +46,7 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">Contact</h4>
             <div className="flex items-center gap-3 text-sm">
               <Mail className="w-4 h-4 text-indigo-500" />
-              <a href="mailto:hello@hblabs.co" className="hover:text-white transition-colors">hello@hblabs.co</a>
+              <a href="mailto:hello@hblabs.tech" className="hover:text-white transition-colors">hello@hblabs.tech</a>
             </div>
             <div className="flex items-start gap-3 text-sm">
               <MapPin className="w-4 h-4 text-indigo-500 mt-1" />

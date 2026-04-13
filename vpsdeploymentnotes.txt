@@ -1,0 +1,9 @@
+React+nodejs:
+
+run after changes on server side:
+pm2 delete app
+pm2 start server.ts --interpreter tsx --name app
+pm2 save
+for nginx changes:
+nano /etc/nginx/sites-available/hblabs
+nginx -t && systemctl restart nginx
