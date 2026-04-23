@@ -49,17 +49,17 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-slate-950">
+    <section id="services" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
-            <span className="text-indigo-500 font-bold tracking-widest uppercase text-xs">Our Expertise</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">
+            <span className="text-indigo-600 font-bold tracking-widest uppercase text-xs">Our Expertise</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-4">
               Full-stack engineering for <br className="hidden md:block" />
               modern digital products.
             </h2>
           </div>
-          <p className="text-slate-400 max-w-sm">
+          <p className="text-slate-600 max-w-sm">
             We don't just write code. We build business assets that are 
             engineered to last and designed to scale.
           </p>
@@ -74,25 +74,25 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="h-full bg-slate-900 border-slate-800 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500 rounded-3xl overflow-hidden group">
+              <Card className="h-full bg-white border-slate-100 hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-500 rounded-3xl overflow-hidden group">
                 <CardHeader className="pt-8 px-8">
-                  <div className="bg-slate-800 w-16 h-16 rounded-2xl flex items-center justify-center text-slate-300 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 group-hover:scale-110">
+                  <div className="bg-slate-50 w-16 h-16 rounded-2xl flex items-center justify-center text-slate-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 group-hover:scale-110">
                     {service.icon}
                   </div>
-                  <CardTitle className="text-2xl font-bold text-white">{service.title}</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-slate-900">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="px-8 pb-8">
-                  <p className="text-slate-400 mb-6 leading-relaxed">
+                  <p className="text-slate-600 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-                  <div className="space-y-4 pt-6 border-t border-slate-800">
+                  <div className="space-y-4 pt-6 border-t border-slate-50">
                     <div>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-400 block mb-1">Business Benefit</span>
-                      <p className="text-sm text-slate-200 font-medium">{service.benefit}</p>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600 block mb-1">Business Benefit</span>
+                      <p className="text-sm text-slate-800 font-medium">{service.benefit}</p>
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block mb-1">Ideal For</span>
-                      <p className="text-sm text-slate-400">{service.useCase}</p>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Ideal For</span>
+                      <p className="text-sm text-slate-500">{service.useCase}</p>
                     </div>
                   </div>
                 </CardContent>

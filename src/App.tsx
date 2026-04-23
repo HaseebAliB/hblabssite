@@ -41,7 +41,7 @@ export default function App() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen bg-slate-950 font-sans selection:bg-indigo-500/30 selection:text-indigo-200">
+    <div className="min-h-screen bg-white font-sans selection:bg-indigo-100 selection:text-indigo-900">
       <ScrollToTop />
       <Navbar />
       <main>

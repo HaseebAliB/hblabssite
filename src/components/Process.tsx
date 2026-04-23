@@ -51,19 +51,19 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-24 bg-slate-950 overflow-hidden">
+    <section id="process" className="py-24 bg-slate-50 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="text-indigo-500 font-bold tracking-widest uppercase text-xs">How We Work</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">The Journey from Idea to Scale</h2>
-          <p className="text-slate-400 text-lg">
+          <span className="text-indigo-600 font-bold tracking-widest uppercase text-xs">How We Work</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mt-4 mb-6">The Journey from Idea to Scale</h2>
+          <p className="text-slate-600 text-lg text-balance">
             A transparent, engineering-led process designed to minimize risk and maximize product quality.
           </p>
         </div>
 
         <div className="relative">
           {/* Vertical Line for Desktop */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-slate-800 hidden lg:block" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 hidden lg:block" />
 
           <div className="space-y-12 lg:space-y-0">
             {steps.map((step, index) => (
@@ -79,24 +79,24 @@ export default function Process() {
               >
                 {/* Content Side */}
                 <div className="w-full lg:w-1/2 px-0 lg:px-12">
-                  <div className={`p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-indigo-500/30 transition-all duration-500 group ${
+                  <div className={`p-8 rounded-3xl bg-white border border-slate-100 hover:border-indigo-200 shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-500 group ${
                     index % 2 === 0 ? "text-left" : "text-left lg:text-right"
                   }`}>
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl ${step.color} text-white mb-6 shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform`}>
                       {step.icon}
                     </div>
-                    <span className="block text-indigo-400 font-bold text-sm mb-2">{step.phase}</span>
-                    <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
-                    <p className="text-indigo-200/80 font-medium mb-4 text-sm italic">Goal: {step.goal}</p>
-                    <p className="text-slate-400 mb-6 leading-relaxed">
+                    <span className="block text-indigo-600 font-bold text-sm mb-2">{step.phase}</span>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4">{step.title}</h3>
+                    <p className="text-indigo-600/80 font-medium mb-4 text-sm italic">Goal: {step.goal}</p>
+                    <p className="text-slate-600 mb-6 leading-relaxed">
                       {step.description}
                     </p>
                     <ul className={`grid grid-cols-1 sm:grid-cols-2 gap-3 ${
                       index % 2 === 0 ? "" : "lg:justify-items-end"
                     }`}>
                       {step.items.map((item, i) => (
-                        <li key={i} className="flex items-center gap-2 text-sm text-slate-300">
-                          <CheckCircle2 className="w-4 h-4 text-indigo-500 shrink-0" />
+                        <li key={i} className="flex items-center gap-2 text-sm text-slate-600">
+                          <CheckCircle2 className="w-4 h-4 text-indigo-600 shrink-0" />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -105,7 +105,7 @@ export default function Process() {
                 </div>
 
                 {/* Center Point */}
-                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-slate-950 border-4 border-slate-900 shadow-xl hidden lg:flex">
+                <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-white border-4 border-slate-50 shadow-lg hidden lg:flex">
                   <div className={`w-3 h-3 rounded-full ${step.color}`} />
                 </div>
 

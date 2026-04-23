@@ -29,7 +29,7 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <div className="pt-32 pb-20 bg-slate-950 min-h-screen">
+    <div className="pt-32 pb-20 bg-white min-h-screen">
       <div className="container mx-auto px-6">
         {/* Story Section */}
         <div className="max-w-4xl mx-auto mb-32">
@@ -38,12 +38,12 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-indigo-500 font-bold tracking-widest uppercase text-xs">Our Story</span>
-            <h1 className="text-4xl md:text-6xl font-black text-white mt-4 mb-8 leading-tight">
+            <span className="text-indigo-600 font-bold tracking-widest uppercase text-xs">Our Story</span>
+            <h1 className="text-4xl md:text-6xl font-black text-slate-900 mt-4 mb-8 leading-tight">
               Engineering the Future <br />
               of Digital Products.
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-slate-400 text-lg leading-relaxed">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-slate-600 text-lg leading-relaxed">
               <p>
                 HBLabs was founded on a simple principle: high-quality software engineering 
                 should be accessible to ambitious startups. We saw too many founders struggling with 
@@ -62,8 +62,8 @@ export default function AboutPage() {
         {/* Values Section */}
         <div className="mb-32">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Core Values</h2>
-            <p className="text-slate-400">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Our Core Values</h2>
+            <p className="text-slate-600">
               These principles guide every decision we make and every line of code we write.
             </p>
           </div>
@@ -75,13 +75,13 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-slate-900 p-8 rounded-3xl border border-slate-800 hover:border-indigo-500/30 transition-all duration-300 group"
+                className="bg-white p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-500/5 transition-all duration-300 group"
               >
-                <div className="bg-slate-800 w-12 h-12 rounded-xl flex items-center justify-center text-indigo-500 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
+                <div className="bg-slate-50 w-12 h-12 rounded-xl flex items-center justify-center text-indigo-600 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed">
+                <h3 className="text-xl font-bold text-slate-900 mb-4">{value.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
                   {value.description}
                 </p>
               </motion.div>
@@ -97,19 +97,19 @@ export default function AboutPage() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-800 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden group"
+          className="bg-gradient-to-br from-indigo-600 via-purple-700 to-indigo-900 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden group shadow-2xl shadow-indigo-500/20"
         >
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
           <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-cyan-500/20 blur-[100px] rounded-full group-hover:scale-110 transition-transform duration-1000" />
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-8 relative z-10">
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-8 relative z-10 leading-tight">
             Ready to build your next <br className="hidden md:block" />
             idea with us?
           </h2>
-          <Button asChild className="bg-white text-indigo-600 hover:bg-indigo-50 rounded-full px-10 py-8 text-xl font-bold relative z-10 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+          <Button asChild className="bg-white text-indigo-600 hover:bg-white/90 rounded-full px-10 py-8 text-xl font-bold relative z-10 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <Link to="/contact">Book a Free Consultation</Link>
           </Button>
         </motion.div>
       </div>
     </div>
-  );
+);
 }

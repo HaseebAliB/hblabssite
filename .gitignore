@@ -1,9 +1,12 @@
 node_modules/
 build/
+dist/
 coverage/
 .DS_Store
 *.log
 .env*
 !.env.example
+sshkey
+sshkey.pub
 setups.sh
-vpsdeploymentnotest.txt
+vpsdeploymentnotes.txt

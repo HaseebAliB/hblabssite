@@ -1,6 +1,10 @@
+ssh root@76.13.179.171
+
 React+nodejs:
 
 run after changes on server side:
+pm2 restart app
+if does not work then:
 pm2 delete app
 pm2 start server.ts --interpreter tsx --name app
 pm2 save

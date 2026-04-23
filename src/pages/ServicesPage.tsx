@@ -62,19 +62,19 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="pt-32 pb-20 bg-slate-950 min-h-screen">
+    <div className="pt-32 pb-20 bg-white min-h-screen">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="max-w-3xl mb-20"
         >
-          <span className="text-indigo-500 font-bold tracking-widest uppercase text-xs">Our Services</span>
-          <h1 className="text-4xl md:text-6xl font-black text-white mt-4 mb-8 leading-tight">
+          <span className="text-indigo-600 font-bold tracking-widest uppercase text-xs">Our Services</span>
+          <h1 className="text-4xl md:text-6xl font-black text-slate-900 mt-4 mb-8 leading-tight">
             Engineering Excellence <br />
             for Every Stage.
           </h1>
-          <p className="text-xl text-slate-400 leading-relaxed">
+          <p className="text-xl text-slate-600 leading-relaxed">
             We provide comprehensive software development services designed to 
             take your product from initial concept to global scale.
           </p>
@@ -89,25 +89,25 @@ export default function ServicesPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-slate-900 border border-slate-800 rounded-[2.5rem] p-8 md:p-12 hover:border-indigo-500/30 transition-all duration-500 group"
+              className="bg-white border border-slate-100 rounded-[2.5rem] p-8 md:p-12 hover:border-indigo-200 hover:shadow-2xl hover:shadow-indigo-500/5 transition-all duration-500 group shadow-sm"
             >
               <div className="flex flex-col lg:flex-row gap-12">
                 <div className="lg:w-1/2">
-                  <div className="bg-slate-800 w-20 h-20 rounded-2xl flex items-center justify-center text-indigo-500 mb-8 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 group-hover:scale-110">
+                  <div className="bg-slate-50 w-20 h-20 rounded-2xl flex items-center justify-center text-slate-600 mb-8 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 group-hover:scale-110">
                     {service.icon}
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{service.title}</h2>
-                  <p className="text-slate-400 text-lg mb-8 leading-relaxed">
+                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">{service.title}</h2>
+                  <p className="text-slate-600 text-lg mb-8 leading-relaxed">
                     {service.description}
                   </p>
                   <div className="flex flex-wrap gap-3 mb-8">
                     {service.tech.map((t) => (
-                      <span key={t} className="px-4 py-1.5 bg-slate-800 text-slate-300 text-xs font-bold rounded-full border border-slate-700">
+                      <span key={t} className="px-4 py-1.5 bg-white text-slate-600 text-xs font-bold rounded-full border border-slate-200">
                         {t}
                       </span>
                     ))}
                   </div>
-                  <Button asChild className="bg-indigo-600 hover:bg-indigo-500 text-white rounded-full px-8 py-6 group">
+                  <Button asChild className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-full px-8 py-6 group shadow-lg shadow-indigo-500/20 transition-all duration-300">
                     <Link to="/contact">
                       Start Your {service.title} Project
                       <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -115,13 +115,13 @@ export default function ServicesPage() {
                   </Button>
                 </div>
 
-                <div className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-8 bg-slate-950/50 p-8 rounded-3xl border border-slate-800/50">
+                <div className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-8 bg-slate-50 p-8 rounded-3xl border border-slate-100/50">
                   <div>
-                    <h4 className="text-indigo-400 font-bold text-sm uppercase tracking-widest mb-6">Key Features</h4>
+                    <h4 className="text-indigo-600 font-bold text-xs uppercase tracking-widest mb-6">Key Features</h4>
                     <ul className="space-y-4">
                       {service.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-3 text-slate-300">
-                          <CheckCircle2 className="w-5 h-5 text-indigo-500 shrink-0" />
+                        <li key={feature} className="flex items-start gap-3 text-slate-700">
+                          <CheckCircle2 className="w-5 h-5 text-indigo-600 shrink-0" />
                           <span className="text-sm font-medium">{feature}</span>
                         </li>
                       ))}
@@ -129,12 +129,12 @@ export default function ServicesPage() {
                   </div>
                   <div className="flex flex-col justify-between">
                     <div>
-                      <h4 className="text-indigo-400 font-bold text-sm uppercase tracking-widest mb-4">Typical Timeline</h4>
-                      <p className="text-2xl font-bold text-white">{service.timeline}</p>
+                      <h4 className="text-indigo-600 font-bold text-xs uppercase tracking-widest mb-4">Typical Timeline</h4>
+                      <p className="text-2xl font-bold text-slate-900">{service.timeline}</p>
                     </div>
-                    <div className="mt-8 p-6 bg-indigo-600/10 border border-indigo-500/20 rounded-2xl">
-                      <p className="text-xs text-indigo-300 font-bold uppercase tracking-widest mb-2">Our Approach</p>
-                      <p className="text-sm text-slate-300 leading-relaxed">
+                    <div className="mt-8 p-6 bg-white border border-indigo-100 rounded-2xl shadow-sm">
+                      <p className="text-[10px] text-indigo-600 font-bold uppercase tracking-widest mb-2">Our Approach</p>
+                      <p className="text-sm text-slate-600 leading-relaxed">
                         We use a quality-first engineering approach with automated testing and CI/CD baked in from day one.
                       </p>
                     </div>
